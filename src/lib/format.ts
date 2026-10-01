@@ -15,13 +15,18 @@ export interface EmiResult {
   principalPercent: number;
 }
 
-export function calculateEmi(principal: number, annualRatePercent: number, tenureYears: number): EmiResult {
+export function calculateEmi(
+  principal: number,
+  annualRatePercent: number,
+  tenureYears: number,
+): EmiResult {
   const monthlyRate = annualRatePercent / 1200;
   const months = tenureYears * 12;
   const emi =
     monthlyRate === 0
       ? principal / months
-      : (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+      : (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) /
+        (Math.pow(1 + monthlyRate, months) - 1);
   const total = emi * months;
   const interest = total - principal;
   const principalPercent = Math.round((principal / total) * 100);

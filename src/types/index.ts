@@ -32,3 +32,8 @@ export interface Stat {
   value: string;
   label: string;
 }
+
+export interface NavLink {
+  label: string;
+  href: string;
+}

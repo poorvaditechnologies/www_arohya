@@ -2,20 +2,16 @@ import {
   ApplyForm,
   EmiCalculator,
   Faq,
-  Footer,
   Hero,
   Journey,
-  Navbar,
   Services,
   Testimonials,
-  WhatsAppFab,
   WhyUs,
-} from './components';
+} from '@/sections/home';
 
-function App() {
+export function HomePage() {
   return (
     <>
-      <Navbar />
       <Hero />
       <Services />
       <WhyUs />
@@ -24,10 +20,6 @@ function App() {
       <Testimonials />
       <Faq />
       <ApplyForm />
-      <Footer />
-      <WhatsAppFab />
     </>
   );
 }
-
-export default App;
