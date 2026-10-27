@@ -2680,7 +2680,7 @@ body {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 40%;
 }
 
 .team-profile-content {
@@ -2747,7 +2747,7 @@ body {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 40%;
 }
 
 .team-meta {
