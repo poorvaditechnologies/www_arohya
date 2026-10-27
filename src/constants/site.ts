@@ -12,5 +12,6 @@ export const NAV_LINKS: NavLink[] = [
   { href: '#journey', labelKey: 'navigation.howItWorks' },
   { href: '#calculator', labelKey: 'navigation.emiCalculator' },
   { href: '#why', labelKey: 'navigation.about' },
+  { href: '#team', labelKey: 'navigation.team' },
   { href: '#apply', labelKey: 'navigation.contact' },
 ];

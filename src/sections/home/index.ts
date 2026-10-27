@@ -4,5 +4,6 @@ export { Faq } from './Faq';
 export { Hero } from './Hero';
 export { Journey } from './Journey';
 export { Services } from './Services';
+export { Team } from './Team';
 export { Testimonials } from './Testimonials';
 export { WhyUs } from './WhyUs';

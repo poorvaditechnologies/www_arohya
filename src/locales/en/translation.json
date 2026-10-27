@@ -6,6 +6,7 @@
     "howItWorks": "How It Works",
     "emiCalculator": "EMI Calculator",
     "about": "About",
+    "team": "Team",
     "contact": "Contact"
   },
   "languageSelector": {
@@ -189,6 +190,27 @@
       "baroda": "Retail & MSME Loans",
       "hdfc": "Private Sector Bank",
       "disclaimer": "* Arohya Capital is an authorized DSA/referral partner. Loan approval, interest rates, and disbursal are decided solely by the respective banks/NBFCs in accordance with applicable regulations."
+    }
+  },
+  "team": {
+    "eyebrow": "LOCAL PEOPLE, PERSONAL SUPPORT",
+    "title": "THE PEOPLE\nBEHIND AROHYA",
+    "description": "Meet the people working behind Arohya Capital to make every loan journey clear, simple, and supportive.",
+    "membersTitle": "THE TEAM",
+    "memberDescription": "Supporting our community with clear, personal guidance throughout the loan process.",
+    "showMore": "View all team members",
+    "showLess": "Show fewer team members",
+    "localGuidance": {
+      "title": "Local Guidance",
+      "description": "Get clear guidance from people who understand the needs of borrowers across Tumkur."
+    },
+    "documentSupport": {
+      "title": "Document Support",
+      "description": "Understand which documents are needed and how to prepare them for your application."
+    },
+    "bankCoordination": {
+      "title": "Bank Coordination",
+      "description": "Get support coordinating with lending partners as your application progresses."
     }
   },
   "emi": {

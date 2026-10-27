@@ -1,4 +1,4 @@
-import { EmiCalculator, Faq, Hero, Journey, Services, Testimonials, WhyUs } from '@/sections/home';
+import { EmiCalculator, Faq, Hero, Journey, Services, Team, WhyUs } from '@/sections/home';
 
 export function HomePage() {
   return (
@@ -7,8 +7,8 @@ export function HomePage() {
       <Services />
       <Journey />
       <WhyUs />
+      <Team />
       <EmiCalculator />
-      <Testimonials />
       <Faq />
     </>
   );

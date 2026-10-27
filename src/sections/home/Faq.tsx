@@ -12,7 +12,6 @@ export function Faq() {
         <div className="faq-heading">
           <div className="section-eyebrow">{t('faq.eyebrow')}</div>
           <h2>{t('faq.title')}</h2>
-          <p>{t('faq.description')}</p>
         </div>
         <div className="faq-list">
           {faqs.map((_faq, index) => {

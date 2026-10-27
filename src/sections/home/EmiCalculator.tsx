@@ -15,7 +15,6 @@ export function EmiCalculator() {
         <div className="emi-heading">
           <div className="section-eyebrow">{t('emi.eyebrow')}</div>
           <h2>{t('emi.title')}</h2>
-          <p>{t('emi.description')}</p>
         </div>
         <div className="emi-panel">
           <div className="emi-controls">
