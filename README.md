@@ -12,6 +12,11 @@ cp .env.example .env.local
 npm run dev        # http://localhost:5173
 ```
 
+The homepage contact form sends submissions through EmailJS. Set
+`VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, and `VITE_EMAILJS_PUBLIC_KEY`
+in `.env.local` (the template should use `{{name}}`, `{{email}}`, `{{preference}}`,
+and `{{summary}}`). Restart the dev server after changing these values.
+
 | Script              | What it does                         |
 | ------------------- | ------------------------------------ |
 | `npm run dev`       | Start the dev server with hot reload |

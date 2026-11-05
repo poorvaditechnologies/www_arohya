@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
 import { useCountUp } from '@/hooks/useCountUp';
 import type { Stat } from '@/types';
 
@@ -18,11 +19,46 @@ function useHeroStats(): Stat[] {
 export function Hero() {
   const { t } = useTranslation();
   const stats = useHeroStats();
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    setIsSubmitted(false);
+    setSubmitError('');
+    setIsSubmitting(true);
+
+    try {
+      const { VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY } =
+        import.meta.env;
+      if (!VITE_EMAILJS_SERVICE_ID || !VITE_EMAILJS_TEMPLATE_ID || !VITE_EMAILJS_PUBLIC_KEY) {
+        throw new Error(t('hero.emailConfigError'));
+      }
+
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+      const summaryField = form.querySelector<HTMLInputElement>('input[name="summary"]');
+      if (!summaryField) {
+        throw new Error(t('hero.submitError'));
+      }
+
+      summaryField.value = [
+        `Loan type: ${formData.get('preference')}`,
+        `Required amount: ₹${formData.get('amount')}`,
+        `Mobile: +91 ${formData.get('phone')}`,
+        `Location: ${formData.get('location')}`,
+      ].join('\n');
+
+      await emailjs.sendForm(VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, form, {
+        publicKey: VITE_EMAILJS_PUBLIC_KEY,
+      });
+      setIsSubmitted(true);
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : t('hero.submitError'));
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -70,7 +106,11 @@ export function Hero() {
             </div>
             <label>
               {t('hero.loanCategory')}
-              <select name="service" defaultValue="Education Loan (India & Overseas)" required>
+              <select
+                name="preference"
+                defaultValue="Education Loan (India & Overseas)"
+                required
+              >
                 <option value="Education Loan (India & Overseas)">
                   {t('hero.loanTypes.education')}
                 </option>
@@ -100,6 +140,10 @@ export function Hero() {
               <input name="name" placeholder={t('hero.namePlaceholder')} required />
             </label>
             <label>
+              {t('hero.email')}
+              <input name="email" type="email" autoComplete="email" required />
+            </label>
+            <label>
               {t('hero.mobile')}
               <span className="phone-field">
                 <span>+91</span>
@@ -123,9 +167,12 @@ export function Hero() {
                 <option value="Other Tumkur District">{t('hero.locations.other')}</option>
               </select>
             </label>
-            <button className="button-primary hero-submit" type="submit">
-              {submitted ? t('hero.submitted') : t('hero.submit')}
+            <input name="summary" type="hidden" />
+            <button className="button-primary hero-submit" type="submit" disabled={isSubmitting}>
+              {isSubmitting ? t('hero.submitting') : t('hero.submit')}
             </button>
+            {isSubmitted && <p role="status">{t('hero.submitSuccess')}</p>}
+            {submitError && <p role="alert">{submitError}</p>}
             <small>{t('hero.privacy')}</small>
           </form>
         </div>

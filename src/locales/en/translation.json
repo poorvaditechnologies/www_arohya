@@ -47,6 +47,7 @@
     "amount": "Required Amount",
     "fullName": "Full Name",
     "namePlaceholder": "e.g. Ramesh Kumar",
+    "email": "Email Address",
     "mobile": "Mobile Number (WhatsApp Preferred)",
     "location": "Your Taluk / Location",
     "locations": {
@@ -58,6 +59,10 @@
     },
     "submitted": "Request received — thank you!",
     "submit": "Get Free Loan Quotes",
+    "submitting": "Sending your request…",
+    "submitSuccess": "Thank you! Your request has been sent. An advisor will contact you soon.",
+    "submitError": "Your request could not be sent. Please try again.",
+    "emailConfigError": "The contact form is not configured. Please contact us by phone or WhatsApp.",
     "privacy": "By submitting, you authorize Arohya Capital to contact you. We respect your privacy. No spam.",
     "stats": {
       "borrowers": "Local Borrowers Advised",
@@ -328,9 +333,18 @@
     "title": "Ready to take the next step?",
     "description": "Share a few details and an AROHYA advisor will call you back within one working day — no obligation and no consultation fee.",
     "name": "Full name",
+    "email": "Email address",
     "mobile": "Mobile number",
     "city": "City",
     "service": "Service required",
+    "errors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email address.",
+      "mobile": "Please enter exactly 10 digits.",
+      "city": "Please enter your city.",
+      "service": "Please select a service."
+    },
+    "validated": "Your details are valid. API submission is not connected yet.",
     "services": {
       "personal": "Personal Loan",
       "home": "Home Loan",
