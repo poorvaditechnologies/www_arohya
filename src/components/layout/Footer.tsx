@@ -1,159 +1,104 @@
-import { GOLD, NAVY } from '@/constants/theme';
-
-const FOOTER_LINK_STYLE = { color: 'rgba(255,255,255,0.6)' };
+import { useTranslation } from 'react-i18next';
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
-    <footer
-      id="contact"
-      style={{ background: '#0B1120', color: 'rgba(255,255,255,0.6)', padding: '64px 32px 40px' }}
-    >
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1.4fr 1fr 1fr 1fr',
-            gap: 48,
-            paddingBottom: 44,
-            borderBottom: '1px solid rgba(255,255,255,0.08)',
-          }}
-        >
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
-              <span
-                style={{
-                  width: 34,
-                  height: 34,
-                  borderRadius: 9,
-                  background: `linear-gradient(135deg, ${GOLD}, #b8952b)`,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: NAVY,
-                  fontWeight: 700,
-                  fontSize: 15,
-                }}
-              >
-                A
-              </span>
-              <span
-                style={{
-                  fontFamily: "'Source Serif 4', serif",
-                  fontSize: 17,
-                  fontWeight: 600,
-                  letterSpacing: 1.5,
-                  color: '#fff',
-                }}
-              >
-                AROHYA CAPITAL
-              </span>
+    <footer id="contact" className="site-footer">
+      <section className="contact-cta">
+        <div className="contact-cta-inner">
+          <div className="contact-copy">
+            <span className="contact-badge">{t('footer.contactBadge')}</span>
+            <h2>{t('footer.contactTitle')}</h2>
+            <p>{t('footer.contactDescription')}</p>
+            <div className="contact-details">
+              <div>
+                <span aria-hidden="true">⌖</span>
+                <p>
+                  <strong>{t('footer.office')}</strong>
+                  <span>B.H. Road, Ashok Nagar, Tumkur - 572102</span>
+                  <span>{t('footer.nearby')}</span>
+                </p>
+              </div>
+              <div>
+                <span aria-hidden="true">◷</span>
+                <p>
+                  <strong>{t('footer.workingHours')}</strong>
+                  <span>{t('footer.weekdays')}</span>
+                  <span>{t('footer.sunday')}</span>
+                </p>
+              </div>
             </div>
-            <p style={{ fontSize: 13, lineHeight: 1.7, margin: 0, maxWidth: 300 }}>
-              One-stop financial solutions for individuals, businesses, and farmers across India.
-              Transparent guidance, multiple banking partners, end-to-end support.
-            </p>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 10, fontSize: 13 }}>
-            <span
-              style={{
-                color: '#fff',
-                fontWeight: 700,
-                fontSize: 13,
-                letterSpacing: 1,
-                marginBottom: 4,
-              }}
-            >
-              SERVICES
-            </span>
-            <a href="#services" className="footer-link" style={FOOTER_LINK_STYLE}>
-              Loan Services
-            </a>
-            <a href="#services" className="footer-link" style={FOOTER_LINK_STYLE}>
-              Business Finance
-            </a>
-            <a href="#services" className="footer-link" style={FOOTER_LINK_STYLE}>
-              Agriculture Finance
-            </a>
-            <a href="#services" className="footer-link" style={FOOTER_LINK_STYLE}>
-              Insurance
-            </a>
-            <a href="#services" className="footer-link" style={FOOTER_LINK_STYLE}>
-              Investments
-            </a>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 10, fontSize: 13 }}>
-            <span
-              style={{
-                color: '#fff',
-                fontWeight: 700,
-                fontSize: 13,
-                letterSpacing: 1,
-                marginBottom: 4,
-              }}
-            >
-              COMPANY
-            </span>
-            <a href="#top" className="footer-link" style={FOOTER_LINK_STYLE}>
-              About Us
-            </a>
-            <a href="#calculator" className="footer-link" style={FOOTER_LINK_STYLE}>
-              Calculators
-            </a>
-            <a href="#faq" className="footer-link" style={FOOTER_LINK_STYLE}>
-              FAQ
-            </a>
-            <a href="#apply" className="footer-link" style={FOOTER_LINK_STYLE}>
-              Careers
-            </a>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 10, fontSize: 13 }}>
-            <span
-              style={{
-                color: '#fff',
-                fontWeight: 700,
-                fontSize: 13,
-                letterSpacing: 1,
-                marginBottom: 4,
-              }}
-            >
-              CONTACT
-            </span>
-            <a href="tel:8277699488" className="footer-link" style={FOOTER_LINK_STYLE}>
-              82776 99488
+          <aside className="contact-card">
+            <h3>{t('footer.helpdesk')}</h3>
+            <p>{t('footer.helpdeskDescription')}</p>
+            <a href="tel:+918162200000" className="contact-method phone-method">
+              <span aria-hidden="true">☎</span>
+              <span>
+                <small>{t('footer.telephone')}</small>
+                <strong>+91 816 220 0000</strong>
+              </span>
+              <span aria-hidden="true">→</span>
             </a>
             <a
-              href="mailto:contact@arohyacapital.in"
-              className="footer-link"
-              style={FOOTER_LINK_STYLE}
+              href="https://wa.me/918162200000"
+              className="contact-method whatsapp-method"
+              target="_blank"
+              rel="noreferrer"
             >
-              contact@arohyacapital.in
+              <span aria-hidden="true">▣</span>
+              <span>
+                <small>{t('footer.whatsapp')}</small>
+                <strong>+91 816 220 0000</strong>
+              </span>
+              <span aria-hidden="true">→</span>
             </a>
-            <a
-              href="https://www.arohyacapital.in"
-              className="footer-link"
-              style={FOOTER_LINK_STYLE}
-            >
-              arohyacapital.in
+            <a href="#apply" className="callback-link">
+              {t('footer.callback')}
             </a>
-          </div>
+          </aside>
         </div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            gap: 20,
-            paddingTop: 26,
-            fontSize: 12,
-            flexWrap: 'wrap',
-          }}
-        >
-          <span>© 2026 AROHYA CAPITAL. All rights reserved.</span>
-          <span style={{ maxWidth: 560, textAlign: 'right', lineHeight: 1.6 }}>
-            AROHYA CAPITAL is a financial services consultancy. Loan approval, interest rates, and
-            investment returns are subject to lender and market conditions — no approvals or returns
-            are guaranteed.
-          </span>
+      </section>
+      <div className="footer-main">
+        <div className="footer-inner">
+          <div className="footer-brand-row">
+            <div>
+              <a href="#top" className="footer-brand">
+                Arohya Capital
+              </a>
+              <p>{t('footer.brandDescription')}</p>
+            </div>
+            <div className="footer-badges">
+              <a href="tel:+918162200000">☎ +91 816 220 0000</a>
+              <span>Tumkur - 572102</span>
+            </div>
+          </div>
+          <div className="footer-info-grid">
+            <div>
+              <h3>{t('footer.regionalOffice')}</h3>
+              <p>B.H. Road, Ashok Nagar, Tumkur - 572102</p>
+              <p>{t('footer.kannadaHelpline')}: +91 816 220 0000</p>
+              <a href="mailto:support@arohyacapital.com">
+                {t('footer.email')}: support@arohyacapital.com
+              </a>
+            </div>
+            <div>
+              <h3>{t('footer.legal')}</h3>
+              <a href="#why">{t('footer.partners')}</a>
+              <a href="#contact">{t('footer.grievance')}</a>
+              <a href="#contact">{t('footer.fairPractices')}</a>
+              <a href="#contact">{t('footer.privacy')}</a>
+            </div>
+            <div>
+              <h3>{t('footer.coverage')}</h3>
+              <p>{t('footer.coverageDescription')}</p>
+            </div>
+          </div>
+          <div className="footer-legal">
+            <p>{t('footer.legalNotice')}</p>
+            <p>{t('footer.disclaimer')}</p>
+          </div>
         </div>
       </div>
     </footer>

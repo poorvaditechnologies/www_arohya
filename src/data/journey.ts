@@ -1,21 +1,24 @@
 import type { JourneyStep } from '@/types';
 
 export const journey: JourneyStep[] = [
-  { num: '01', title: 'Submit Enquiry', desc: 'Reach us by form, call, or WhatsApp.' },
+  {
+    num: '01',
+    title: 'Share Requirement',
+    desc: 'Fill our quick form, WhatsApp us, or visit our B.H. Road office in Tumkur to discuss your exact funding need.',
+  },
   {
     num: '02',
-    title: 'Free Consultation',
-    desc: 'Understand your needs and options — no charges.',
+    title: 'Compare 28+ Banks',
+    desc: 'We analyze interest rates, processing fees, CIBIL suitability, and tenure across SBI, Canara, HDFC, and more.',
   },
-  { num: '03', title: 'Document Verification', desc: 'We check your paperwork before lenders do.' },
+  {
+    num: '03',
+    title: 'Doorstep Paperwork',
+    desc: 'Our Tumkur executives guide your KYC, ITR, property title deeds, or business papers to eliminate bank rejection risks.',
+  },
   {
     num: '04',
-    title: 'Eligibility Assessment',
-    desc: 'Honest evaluation across multiple lenders.',
+    title: 'Sanction & Disbursal',
+    desc: 'The partner bank approves your loan file, and funds are credited directly to your bank account with complete peace of mind.',
   },
-  { num: '05', title: 'Bank Selection', desc: 'Compare rates and terms; you choose.' },
-  { num: '06', title: 'Loan Application', desc: 'We handle the filing end to end.' },
-  { num: '07', title: 'Approval Process', desc: 'Active follow-up until sanction.' },
-  { num: '08', title: 'Loan Disbursement', desc: 'Funds released to your account.' },
-  { num: '09', title: 'Ongoing Support', desc: 'A relationship, not a one-time deal.' },
 ];

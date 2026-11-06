@@ -1,24 +1,20 @@
 import type { WhyItem } from '@/types';
 
 export const whyItems: WhyItem[] = [
-  { title: 'Trusted Financial Guidance', desc: 'Advice driven by your goals, not commissions.' },
   {
-    title: 'Transparent Process',
-    desc: 'Every fee, rate, and condition disclosed in writing upfront.',
+    title: 'No Running Between Branches',
+    desc: 'One application file lets you compare multiple banks at once, saving you weeks of stressful branch visits.',
   },
   {
-    title: 'Multiple Banking Partners',
-    desc: 'We compare offers across lenders to find your best fit.',
-  },
-  { title: 'Fast Processing', desc: 'Documentation done right the first time — fewer delays.' },
-  {
-    title: 'Personalized Planning',
-    desc: 'Solutions structured around your income and life stage.',
+    title: 'Local Tumkur Presence',
+    desc: 'Walk in and talk to real human counselors at B.H. Road, Ashok Nagar. We are rooted in your community.',
   },
   {
-    title: 'Expert Advisors',
-    desc: 'Experienced professionals across lending, insurance, and investing.',
+    title: '100% Free Advice',
+    desc: 'We do not ask for upfront fees or processing advance from borrowers. Our remuneration is handled directly by partner banks.',
   },
-  { title: 'End-to-End Support', desc: 'From first enquiry to disbursement — and well beyond.' },
-  { title: 'Long-Term Relationships', desc: 'We measure success in decades, not transactions.' },
+  {
+    title: 'Bilingual Guidance',
+    desc: 'ಕನ್ನಡ ಮತ್ತು ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ ಮಾರ್ಗದರ್ಶನ. No confusing English terms; understand every fine print clause.',
+  },
 ];

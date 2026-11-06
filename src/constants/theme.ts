@@ -1,3 +1,3 @@
-export const GOLD = '#D4AF37';
-export const NAVY = '#0F172A';
-export const BLUE = '#1D4ED8';
+export const GOLD = '#F2683A';
+export const NAVY = '#102B49';
+export const BLUE = '#245B9B';

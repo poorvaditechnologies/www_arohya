@@ -3,23 +3,23 @@ import type { Testimonial } from '@/types';
 export const testimonials: Testimonial[] = [
   {
     quote:
-      'AROHYA compared offers from four banks for our home loan and negotiated a rate we could never have gotten on my own. Completely transparent about every charge.',
-    name: 'Ramesh & Kavitha N.',
-    role: 'Home Loan · Bengaluru',
-    initials: 'RK',
+      'Arohya helped our 12-member Stree Shakti group secure ₹8 lakhs bank linkage for our dairy business without agent exploitation. They explained every detail in simple Kannada and handled bank visits.',
+    name: 'Mahalakshmi & Radha',
+    role: 'SHG Group Leaders, Gubbi Taluk',
+    initials: 'SHG Linked',
   },
   {
     quote:
-      'As a first-generation entrepreneur, I had no idea where to start. Their team structured my MSME loan and working capital in under three weeks.',
-    name: 'Sandeep Gowda',
-    role: 'Business Loan · Mysuru',
-    initials: 'SG',
+      'Got my German MS education loan through a nationalized bank in 14 days. Their team handled all collateral paperwork, valuation documents, and university fee disbursement schedule seamlessly.',
+    name: 'Chethan Kumar',
+    role: 'MS Graduate, Tumkur Town',
+    initials: 'Overseas Ed',
   },
   {
     quote:
-      'They helped me consolidate three EMIs into one and set up my first SIP. For the first time, my finances feel like a plan instead of a burden.',
-    name: 'Priya Shetty',
-    role: 'Advisory & Investments · Mangaluru',
-    initials: 'PS',
+      'Smooth commercial vehicle loan for our copra transport truck. Friendly Kannada-speaking staff visited our APMC shop in Tiptur, collected RC & ITR documents, and got us 85% on-road funding.',
+    name: 'Suresh Gowda',
+    role: 'Copra Merchant & Farmer, Tiptur',
+    initials: 'Commercial',
   },
 ];

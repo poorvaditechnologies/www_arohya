@@ -1,15 +1,15 @@
 /* Design tokens. Change brand colours, spacing and typography here only. */
 :root {
   /* Colours */
-  --color-primary: #1d4ed8;
-  --color-primary-soft: rgb(29 78 216 / 0.15);
-  --color-gold: #d4af37;
-  --color-navy: #0f172a;
+  --color-primary: #245b9b;
+  --color-primary-soft: rgb(36 91 155 / 0.1);
+  --color-gold: #f2683a;
+  --color-navy: #06192b;
   --color-on-primary: #ffffff;
-  --color-bg: #ffffff;
-  --color-surface: #f4f5f7;
-  --color-text: #1e293b;
-  --color-text-muted: #475569;
+  --color-bg: #f8f9fd;
+  --color-surface: #eef2ff;
+  --color-text: #172536;
+  --color-text-muted: #5e6877;
 
   /* Typography */
   --font-sans: 'Public Sans', sans-serif;

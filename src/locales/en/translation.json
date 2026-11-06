@@ -1,0 +1,363 @@
+{
+  "pageTitle": "AROHYA CAPITAL — One-Stop Financial Solutions",
+  "navigation": {
+    "home": "Home",
+    "loans": "Loans",
+    "howItWorks": "How It Works",
+    "emiCalculator": "EMI Calculator",
+    "about": "About",
+    "team": "Team",
+    "contact": "Contact"
+  },
+  "languageSelector": {
+    "label": "Select language"
+  },
+  "navbar": {
+    "announcement": "Authorised Loan Facilitator & DSA: Arohya Capital partners with 25+ RBI-regulated Banks & NBFCs. We are not a direct lender.",
+    "branch": "Support in Kannada | Tumkur Office: B.H. Road, Ashok Nagar",
+    "tagline": "Your Tumkur Loan Advisory Partner",
+    "applyNow": "Apply Now"
+  },
+  "hero": {
+    "eyebrow": "Tumkur's Most Trusted Loan Facilitation Partner · 25+ Banks & NBFCs",
+    "title": "The right loan, from the right bank —",
+    "titleHighlight": "without the running around.",
+    "description": "We compare verified loan offers from top partner banks, manage your paperwork end-to-end, and support you directly until loan disbursal. Dedicated local advisors right here in Tumkur, speaking your language.",
+    "checkEligibility": "Check Eligibility (Free)",
+    "whatsapp": "Chat on WhatsApp",
+    "benefits": {
+      "noFees": "Zero advance fees",
+      "paperwork": "100% paperwork guidance",
+      "languages": "Support in Kannada & English"
+    },
+    "localTitle": "Your neighborhood loan advisors",
+    "localDescription": "Tumkur's trusted local loan advisors. Honest comparison, documentation support, and help through disbursal.",
+    "formLabel": "INSTANT SERVICE",
+    "formTitle": "Request a Free Consultation",
+    "freeBadge": "100% Free",
+    "loanCategory": "Select Loan Category",
+    "loanTypes": {
+      "education": "Education Loan (India & Overseas)",
+      "home": "Home & Plot Loan",
+      "vehicle": "Vehicle Loan",
+      "personal": "Personal Loan",
+      "shg": "SHG (Stree Shakti) Loan",
+      "business": "Business & MSME Loan"
+    },
+    "amount": "Required Amount",
+    "fullName": "Full Name",
+    "namePlaceholder": "e.g. Ramesh Kumar",
+    "email": "Email Address",
+    "mobile": "Mobile Number (WhatsApp Preferred)",
+    "location": "Your Taluk / Location",
+    "locations": {
+      "tumkur": "Tumkur City (Tumakuru)",
+      "kunigal": "Kunigal",
+      "gubbi": "Gubbi",
+      "tiptur": "Tiptur",
+      "other": "Other Tumkur District location"
+    },
+    "submitted": "Request received — thank you!",
+    "submit": "Get Free Loan Quotes",
+    "submitting": "Sending your request…",
+    "submitSuccess": "Thank you! Your request has been sent. An advisor will contact you soon.",
+    "submitError": "Your request could not be sent. Please try again.",
+    "emailConfigError": "The contact form is not configured. Please contact us by phone or WhatsApp.",
+    "privacy": "By submitting, you authorize Arohya Capital to contact you. We respect your privacy. No spam.",
+    "stats": {
+      "borrowers": "Local Borrowers Advised",
+      "partners": "Partner Banks & NBFCs",
+      "disbursed": "Disbursed via Partners",
+      "years": "Serving Tumkur District"
+    }
+  },
+  "services": {
+    "eyebrow": "COMPREHENSIVE FINANCIAL FACILITATION",
+    "title": "Loan Solutions Tailored for Tumkur",
+    "description": "Compare rates and processing terms across our 28+ lending partners. We assist with documentation and bank liaison.",
+    "disclaimer": "* Interest rates are subject to bank policy and the applicant's credit score.",
+    "featured": "WOMEN'S EMPOWERMENT",
+    "products": [
+      {
+        "title": "Education Loan",
+        "badge": "High Approval",
+        "subtitle": "Studies in India & Overseas",
+        "description": "Financing for tuition fees, accommodation, living expenses, and laptops. Collateral and co-applicant options are available with partner banks.",
+        "rateLabel": "Interest starting at",
+        "action": "Check Education Loan Offers"
+      },
+      {
+        "title": "Home & Plot Loan",
+        "badge": "Most Popular",
+        "subtitle": "Purchase, Ready Plot & Construction",
+        "description": "Finance for ready flats, construction, and approved plots, or transfer your existing home loan to access a lower interest rate.",
+        "rateLabel": "Interest starting at",
+        "action": "Check Home Loan Offers"
+      },
+      {
+        "title": "Vehicle Loan",
+        "badge": "Fast Sanction",
+        "subtitle": "Cars, Commercial Vehicles & Tractors",
+        "description": "Financing for two-wheelers, new and used cars, agricultural tractors, and commercial transport vehicles for Tumkur businesses.",
+        "rateLabel": "Interest starting at",
+        "action": "Check Vehicle Loan Offers"
+      },
+      {
+        "title": "Personal Loan",
+        "badge": "Minimal Documents",
+        "subtitle": "Salaried, Self-Employed & Medical",
+        "description": "Quick financing for weddings, medical emergencies, home renovation, or debt consolidation, with no collateral requirement.",
+        "rateLabel": "Interest starting at",
+        "action": "Check Personal Loan Offers"
+      },
+      {
+        "title": "SHG (Stree Shakti) Loan",
+        "badge": "Special Focus",
+        "subtitle": "Joint Liability Group Micro-Enterprise",
+        "description": "Bank finance assistance for rural women's self-help groups, dairy initiatives, tailoring units, and small businesses across Tumkur district.",
+        "rateLabel": "Subsidized government schemes",
+        "action": "Enquire About SHG Group"
+      },
+      {
+        "title": "Business & MSME Loan",
+        "badge": "Mudra & MSME",
+        "subtitle": "Working Capital & Machinery",
+        "description": "Unsecured business loans, OD/CC credit limits, machinery finance, and CGTMSE-covered credit for manufacturers and retail merchants.",
+        "rateLabel": "Interest starting at",
+        "action": "Check Business Loan Offers"
+      }
+    ]
+  },
+  "journey": {
+    "eyebrow": "A CLEAR & TRANSPARENT PROCESS",
+    "title": "How Arohya Capital Simplifies Your Loan",
+    "description": "No endless queues. No confusing banking jargon. We bridge the gap between you and the right lending institution.",
+    "steps": [
+      {
+        "title": "Share Your Requirement",
+        "description": "Fill out our quick form, WhatsApp us, or visit our B.H. Road office in Tumkur to discuss your funding needs.",
+        "label": "Step 1: 5-minute initial discussion"
+      },
+      {
+        "title": "Compare 28+ Banks",
+        "description": "We compare interest rates, processing fees, CIBIL suitability, and tenure across SBI, Canara, HDFC, and more.",
+        "label": "Step 2: Find a suitable rate"
+      },
+      {
+        "title": "Paperwork Support",
+        "description": "Our Tumkur team guides you through KYC, ITR, property title deeds, or business papers to help avoid documentation issues.",
+        "label": "Step 3: Verification & filing"
+      },
+      {
+        "title": "Sanction & Disbursal",
+        "description": "The partner bank reviews and decides on your loan application. If approved, funds are credited directly to your bank account.",
+        "label": "Step 4: Direct bank credit"
+      }
+    ],
+    "visitTitle": "Need personal guidance in your taluk?",
+    "visitDescription": "Our field coordinators visit Gubbi, Sira, Tiptur, Kunigal, and surrounding areas.",
+    "visitAction": "Request a Home or Office Visit"
+  },
+  "why": {
+    "eyebrow": "LOCAL TRUST & INTEGRITY",
+    "title": "Why Borrowers in Tumkur Choose Arohya",
+    "description": "When borrowing money, you deserve someone on your side. We work transparently as an authorized Direct Selling Agent (DSA) for our partner lenders.",
+    "promises": {
+      "lendersTitle": "Empanelled with Regulated Lenders",
+      "lendersDescription": "We work with RBI-authorized scheduled commercial banks and reputed NBFCs.",
+      "roleTitle": "A Transparent Facilitator",
+      "roleDescription": "Never sign blank forms. Official sanction letters and loan terms come directly from the lender."
+    },
+    "items": [
+      {
+        "title": "No Running Between Branches",
+        "description": "One application lets you compare options from multiple banks, saving you repeated branch visits."
+      },
+      {
+        "title": "Local Tumkur Presence",
+        "description": "Talk with our counselors at B.H. Road, Ashok Nagar. We are part of your community."
+      },
+      {
+        "title": "Free Advice",
+        "description": "We do not ask borrowers for upfront advisory fees or processing advances. Partner banks pay us directly for our services."
+      },
+      {
+        "title": "Kannada & English Guidance",
+        "description": "We explain loan terms in Kannada and English so you can understand the details before making a decision."
+      }
+    ],
+    "partners": {
+      "eyebrow": "AUTHORIZED DSA FOR OFFICIAL LOAN PROGRAMS",
+      "title": "Facilitating Loans Through Leading Indian Institutions",
+      "sbi": "Nationalized Partner",
+      "canara": "Karnataka Lead Bank",
+      "karnataka": "Regional Specialist",
+      "baroda": "Retail & MSME Loans",
+      "hdfc": "Private Sector Bank",
+      "disclaimer": "* Arohya Capital is an authorized DSA/referral partner. Loan approval, interest rates, and disbursal are decided solely by the respective banks/NBFCs in accordance with applicable regulations."
+    }
+  },
+  "team": {
+    "eyebrow": "LOCAL PEOPLE, PERSONAL SUPPORT",
+    "title": "THE PEOPLE\nBEHIND AROHYA",
+    "description": "Meet the people working behind Arohya Capital to make every loan journey clear, simple, and supportive.",
+    "membersTitle": "THE TEAM",
+    "memberDescription": "Supporting our community with clear, personal guidance throughout the loan process.",
+    "showMore": "View all team members",
+    "showLess": "Show fewer team members",
+    "localGuidance": {
+      "title": "Local Guidance",
+      "description": "Get clear guidance from people who understand the needs of borrowers across Tumkur."
+    },
+    "documentSupport": {
+      "title": "Document Support",
+      "description": "Understand which documents are needed and how to prepare them for your application."
+    },
+    "bankCoordination": {
+      "title": "Bank Coordination",
+      "description": "Get support coordinating with lending partners as your application progresses."
+    }
+  },
+  "emi": {
+    "eyebrow": "TRANSPARENT PLANNING TOOL",
+    "title": "Interactive Loan EMI Calculator",
+    "description": "Estimate your monthly repayment. Adjust the loan amount, interest rate, and tenure below.",
+    "loanAmount": "Loan Amount",
+    "ranges": {
+      "oneLakh": "₹1 Lakh",
+      "fiftyLakhs": "₹50 Lakhs",
+      "oneCrore": "₹1 Crore"
+    },
+    "interestRate": "Interest Rate (p.a.)",
+    "tenure": "Loan Tenure",
+    "years_one": "{{count}} Year",
+    "years_other": "{{count}} Years",
+    "note": "This calculator provides an estimated Equated Monthly Instalment (EMI) using a standard amortization calculation. Actual bank offers may vary based on credit assessment and processing charges.",
+    "resultsTitle": "YOUR ESTIMATED REPAYMENT",
+    "monthly": "Monthly EMI",
+    "principalAmount": "Principal Amount:",
+    "totalInterest": "Total Interest Payable:",
+    "totalRepayment": "Total Repayment Amount:",
+    "ratio": "Principal vs Interest Ratio",
+    "ratioAria": "{{principal}}% principal, {{interest}}% interest",
+    "principal": "Principal",
+    "interest": "Interest",
+    "apply": "Get Pre-Approved for This EMI"
+  },
+  "testimonials": {
+    "eyebrow": "VOICES FROM TUMKUR DISTRICT",
+    "title": "Stories from Our Customers",
+    "description": "Hear from families, students, and small businesses in Gubbi, Tiptur, and Tumkur.",
+    "stars": "5 out of 5 stars",
+    "items": [
+      {
+        "quote": "Arohya helped our 12-member Stree Shakti group secure ₹8 lakhs in bank financing for our dairy business. They explained everything in simple Kannada and helped with bank visits.",
+        "role": "Self-help group leaders, Gubbi Taluk",
+        "tag": "SHG group"
+      },
+      {
+        "quote": "I got an education loan for my MS in Germany through a nationalized bank. The team helped with the collateral paperwork, valuation documents, and university fee schedule.",
+        "role": "MS graduate, Tumkur",
+        "tag": "Overseas education"
+      },
+      {
+        "quote": "The team helped us with a commercial vehicle loan for our copra transport truck. Kannada-speaking staff visited our shop in Tiptur and helped collect the documents.",
+        "role": "Copra merchant and farmer, Tiptur",
+        "tag": "Commercial vehicle"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "CLEAR ANSWERS",
+    "title": "Frequently Asked Questions",
+    "description": "Learn about our role, fees, and the loan application process.",
+    "items": [
+      {
+        "question": "Do you charge any upfront fees or commission from borrowers?",
+        "answer": "No. We do not charge borrowers upfront or unauthorized advisory fees. Arohya Capital works as an empanelled Direct Selling Agent (DSA). Our partner bank or NBFC pays us for facilitation after a successful sanction and disbursal, according to its agreement."
+      },
+      {
+        "question": "Which banks and financial institutions do you partner with?",
+        "answer": "We facilitate applications through our empanelled bank and NBFC partners. Available lenders and loan programs depend on your requirements, eligibility, location, and the lender's current policy."
+      },
+      {
+        "question": "How long does the loan approval process take in Tumkur?",
+        "answer": "The lender reviews each application and sets its own timeline. Processing time depends on the loan type, completeness of your documents, verification, and the lender's approval process."
+      },
+      {
+        "question": "What if my CIBIL score is lower than average or has an old issue?",
+        "answer": "A lower or limited credit history does not guarantee approval or rejection. We can help explain lender requirements and discuss suitable options; each lender makes its own decision after reviewing your application."
+      },
+      {
+        "question": "What land or property documents are required for a home loan in Tumkur?",
+        "answer": "Requirements vary by lender and property. They commonly include sale deed or title documents, a recent encumbrance certificate, approved plan, tax receipts, and identity and income documents. Your selected lender will confirm the exact checklist."
+      }
+    ]
+  },
+  "footer": {
+    "contactBadge": "LOCAL WALK-IN ADVISORY",
+    "contactTitle": "Visit Our Tumkur Office or Speak with a Loan Specialist Today",
+    "contactDescription": "Prefer meeting a financial advisor in person? Visit our Ashok Nagar office on B.H. Road.",
+    "office": "Tumkur Main Office",
+    "nearby": "(Near Ashoka Theatre Circle)",
+    "workingHours": "Working Hours",
+    "weekdays": "Monday to Saturday: 9:30 AM – 7:00 PM",
+    "sunday": "Sunday: By Prior Appointment",
+    "helpdesk": "Direct Helpdesk Contacts",
+    "helpdeskDescription": "Kannada- and English-speaking loan counselors are ready to help.",
+    "telephone": "Telephone Helpline",
+    "whatsapp": "WhatsApp Assistance",
+    "callback": "Or fill out the online form for a priority callback →",
+    "brandDescription": "Empanelled Loan Facilitator & Direct Selling Agent · Tumkur, Karnataka",
+    "regionalOffice": "Regional Office",
+    "kannadaHelpline": "Kannada Helpline",
+    "email": "Email",
+    "legal": "Regulatory & Legal",
+    "partners": "Partner Banks & NBFCs",
+    "grievance": "Grievance Redressal",
+    "fairPractices": "Fair Practices Code",
+    "privacy": "Privacy Policy",
+    "coverage": "Taluk Coverage",
+    "coverageDescription": "Doorstep advisory in Tumkur, Gubbi, Tiptur, Sira, Kunigal, Madhugiri, Koratagere, Pavagada, and Chikkanayakanahalli.",
+    "legalNotice": "© 2024 Arohya Capital. All Rights Reserved. Arohya Capital operates as an authorized Direct Selling Agent (DSA) and loan facilitator partnered with RBI-regulated banks and NBFCs. We do not directly disburse loans or hold borrower liability. Serving Tumkur, Karnataka.",
+    "disclaimer": "Disclaimer: Loan approval, interest rates, tenure, and disbursal are at the sole discretion of partner banks based on their underwriting criteria and applicant eligibility. Arohya Capital does not demand cash fees or advance payments from customers."
+  },
+  "notFound": {
+    "description": "This page doesn't exist.",
+    "home": "Back home"
+  },
+  "whatsapp": {
+    "ariaLabel": "Chat with us on WhatsApp"
+  },
+  "applyForm": {
+    "title": "Ready to take the next step?",
+    "description": "Share a few details and an AROHYA advisor will call you back within one working day — no obligation and no consultation fee.",
+    "name": "Full name",
+    "email": "Email address",
+    "mobile": "Mobile number",
+    "city": "City",
+    "service": "Service required",
+    "errors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email address.",
+      "mobile": "Please enter exactly 10 digits.",
+      "city": "Please enter your city.",
+      "service": "Please select a service."
+    },
+    "validated": "Your details are valid. API submission is not connected yet.",
+    "services": {
+      "personal": "Personal Loan",
+      "home": "Home Loan",
+      "business": "Business Loan",
+      "gold": "Gold Loan",
+      "agriculture": "Agriculture Finance",
+      "insurance": "Insurance",
+      "investments": "Investments",
+      "realEstate": "Real Estate",
+      "advisory": "Financial Advisory"
+    },
+    "submitted": "Thank you — we will call you within 1 working day",
+    "submit": "Request a Free Call Back",
+    "whatsapp": "Message us on WhatsApp"
+  }
+}

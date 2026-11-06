@@ -1,18 +1,19 @@
 import { useState, type CSSProperties } from 'react';
+import { useTranslation } from 'react-i18next';
 import { GOLD, NAVY } from '@/constants/theme';
 
 const SERVICE_OPTIONS = [
-  'Service required',
-  'Personal Loan',
-  'Home Loan',
-  'Business Loan',
-  'Gold Loan',
-  'Agriculture Finance',
-  'Insurance',
-  'Investments',
-  'Real Estate',
-  'Financial Advisory',
-];
+  'service',
+  'personal',
+  'home',
+  'business',
+  'gold',
+  'agriculture',
+  'insurance',
+  'investments',
+  'realEstate',
+  'advisory',
+] as const;
 
 const fieldStyle: CSSProperties = {
   background: 'rgba(255,255,255,0.07)',
@@ -26,6 +27,7 @@ const fieldStyle: CSSProperties = {
 };
 
 export function ApplyForm() {
+  const { t } = useTranslation();
   const [submitted, setSubmitted] = useState(false);
 
   return (
@@ -48,7 +50,7 @@ export function ApplyForm() {
             margin: '0 0 16px',
           }}
         >
-          Ready to take the next step?
+          {t('applyForm.title')}
         </h2>
         <p
           style={{
@@ -58,8 +60,7 @@ export function ApplyForm() {
             margin: '0 0 40px',
           }}
         >
-          Share a few details and an AROHYA advisor will call you back within one working day — no
-          obligation, no charges for the consultation.
+          {t('applyForm.description')}
         </p>
         <form
           onSubmit={(e) => {
@@ -78,15 +79,17 @@ export function ApplyForm() {
             backdropFilter: 'blur(8px)',
           }}
         >
-          <input placeholder="Full name" className="field-input" style={fieldStyle} />
-          <input placeholder="Mobile number" className="field-input" style={fieldStyle} />
-          <input placeholder="City" className="field-input" style={fieldStyle} />
+          <input placeholder={t('applyForm.name')} className="field-input" style={fieldStyle} />
+          <input placeholder={t('applyForm.mobile')} className="field-input" style={fieldStyle} />
+          <input placeholder={t('applyForm.city')} className="field-input" style={fieldStyle} />
           <select
             className="field-input"
             style={{ ...fieldStyle, color: 'rgba(255,255,255,0.75)' }}
           >
-            {SERVICE_OPTIONS.map((opt) => (
-              <option key={opt}>{opt}</option>
+            {SERVICE_OPTIONS.map((option) => (
+              <option key={option}>
+                {t(`applyForm.${option === 'service' ? 'service' : `services.${option}`}`)}
+              </option>
             ))}
           </select>
           <button
@@ -105,9 +108,7 @@ export function ApplyForm() {
               fontFamily: "'Public Sans', sans-serif",
             }}
           >
-            {submitted
-              ? '✓ Thank you — we will call you within 1 working day'
-              : 'Request a Free Call Back'}
+            {submitted ? `✓ ${t('applyForm.submitted')}` : t('applyForm.submit')}
           </button>
         </form>
         <div
@@ -140,7 +141,7 @@ export function ApplyForm() {
             className="link-whatsapp"
             style={{ color: '#10B981', fontWeight: 600 }}
           >
-            WhatsApp us
+            {t('applyForm.whatsapp')}
           </a>
         </div>
       </div>

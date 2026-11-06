@@ -12,6 +12,11 @@ cp .env.example .env.local
 npm run dev        # http://localhost:5173
 ```
 
+The homepage contact form sends submissions through EmailJS. Set
+`VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, and `VITE_EMAILJS_PUBLIC_KEY`
+in `.env.local` (the template should use `{{name}}`, `{{email}}`, `{{preference}}`,
+and `{{summary}}`). Restart the dev server after changing these values.
+
 | Script              | What it does                         |
 | ------------------- | ------------------------------------ |
 | `npm run dev`       | Start the dev server with hot reload |
@@ -41,6 +46,7 @@ Run `npm run lint && npm run build` before every push — both must pass.
 │   ├── data/                Static content lists (services, FAQs, testimonials…)
 │   ├── hooks/               Custom React hooks (useXxx.ts)
 │   ├── lib/                 Pure helpers & shared animation variants (motion.ts)
+│   ├── locales/             JSON translation resources (en, kn)
 │   ├── pages/               One component per route, composed from sections
 │   ├── sections/            Page sections, grouped by page (sections/home/…)
 │   ├── services/            API calls / form submissions
@@ -81,6 +87,12 @@ you add a real file to that folder.
 - **Adding a page:** create `src/pages/XxxPage.tsx` and register it in `src/app/router.tsx`.
 - **Env vars:** must start with `VITE_` and are read via `import.meta.env.VITE_…`.
   Never put secrets in them; they are shipped to the browser.
+- **Translations:** i18next is initialized in `src/i18n.ts` and loaded by `src/main.tsx`.
+  Add matching keys to `src/locales/en/translation.json` and
+  `src/locales/kn/translation.json`, then use `const { t } = useTranslation()` and
+  `t('your.key')` in a React component. The language selector switches the site between
+  English (`en`) and Kannada (`kn`), and saves the selection for the next visit. English is
+  the fallback language.
 
 ## Git workflow
 

@@ -1,25 +1,15 @@
-import {
-  ApplyForm,
-  EmiCalculator,
-  Faq,
-  Hero,
-  Journey,
-  Services,
-  Testimonials,
-  WhyUs,
-} from '@/sections/home';
+import { EmiCalculator, Faq, Hero, Journey, Services, Team, WhyUs } from '@/sections/home';
 
 export function HomePage() {
   return (
     <>
       <Hero />
       <Services />
-      <WhyUs />
-      <EmiCalculator />
       <Journey />
-      <Testimonials />
+      <WhyUs />
+      <Team />
+      <EmiCalculator />
       <Faq />
-      <ApplyForm />
     </>
   );
 }

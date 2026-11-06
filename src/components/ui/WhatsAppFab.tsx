@@ -1,9 +1,13 @@
+import { useTranslation } from 'react-i18next';
+
 export function WhatsAppFab() {
+  const { t } = useTranslation();
+
   return (
     <a
-      href="https://wa.me/918277699488"
+      href="https://wa.me/918162200000"
       className="fab-whatsapp"
-      aria-label="Chat on WhatsApp"
+      aria-label={t('whatsapp.ariaLabel')}
       style={{
         position: 'fixed',
         bottom: 26,
