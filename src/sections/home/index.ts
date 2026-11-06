@@ -1,9 +1,11 @@
-export { ApplyForm } from './ApplyForm';
+export { Apply } from './Apply';
+export { ContactBand } from './ContactBand';
 export { EmiCalculator } from './EmiCalculator';
 export { Faq } from './Faq';
 export { Hero } from './Hero';
 export { Journey } from './Journey';
 export { Services } from './Services';
+export { Stats } from './Stats';
 export { Team } from './Team';
 export { Testimonials } from './Testimonials';
 export { WhyUs } from './WhyUs';

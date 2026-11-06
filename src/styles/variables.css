@@ -1,36 +1,64 @@
 /* Design tokens. Change brand colours, spacing and typography here only. */
 :root {
-  /* Colours */
-  --color-primary: #245b9b;
-  --color-primary-soft: rgb(36 91 155 / 0.1);
-  --color-gold: #f2683a;
-  --color-navy: #06192b;
-  --color-on-primary: #ffffff;
-  --color-bg: #f8f9fd;
-  --color-surface: #eef2ff;
-  --color-text: #172536;
-  --color-text-muted: #5e6877;
+  /* Colour — warm paper, deep ink, one accent. */
+  --paper: #f4f1ea;
+  --paper-2: #ebe6db;
+  --paper-3: #e1dacb;
+  --card: #fbfaf6;
+  --ink: #0b1a2a;
+  --ink-2: #13283d;
+  --ink-3: #1d3650;
+  --text: #0b1a2a;
+  --text-2: #4a5563;
+  --text-3: #7b828c;
+  --line: rgb(11 26 42 / 0.12);
+  --line-strong: rgb(11 26 42 / 0.22);
+  --accent: #e0592b;
+  --accent-ink: #b8431a;
+  --accent-soft: #f6dccf;
+  --brass: #c9a25e;
+  --brass-light: #e6cf9c;
+  --brass-ink: #8c6a2c;
+  --brass-soft: rgb(201 162 94 / 0.16);
+  --ink-deep: #071220;
+  --sage: #2d7a57;
+  --sage-soft: #dcebe2;
+  --on-ink: #f4f1ea;
+  --on-ink-2: rgb(244 241 234 / 0.66);
+  --on-ink-3: rgb(244 241 234 / 0.4);
+  --line-on-ink: rgb(244 241 234 / 0.14);
+
+  /* Legacy aliases used by older components. */
+  --color-primary: var(--ink);
+  --color-gold: var(--accent);
+  --color-navy: var(--ink);
+  --color-text: var(--text);
 
   /* Typography */
-  --font-sans: 'Public Sans', sans-serif;
-  --font-serif: 'Source Serif 4', serif;
+  --font-display: 'Instrument Serif', 'Noto Serif Kannada', Georgia, serif;
+  --font-sans: 'Geist', 'Noto Sans Kannada', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
 
-  /* Spacing scale (0.25rem steps) */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-12: 6rem;
+  --fs-hero: clamp(3.1rem, 7.6vw, 7.4rem);
+  --fs-h2: clamp(2.4rem, 5vw, 4.4rem);
+  --fs-h3: clamp(1.45rem, 2.2vw, 1.9rem);
+  --fs-lead: clamp(1.05rem, 1.3vw, 1.2rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-micro: 0.75rem;
 
   /* Layout */
-  --container-width: 1200px;
-  --radius-sm: 6px;
+  --container: 1280px;
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --section-y: clamp(5rem, 11vw, 9.5rem);
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
   --radius-full: 999px;
-  --shadow-sm: 0 1px 8px rgb(15 23 42 / 0.08);
 
   /* Motion */
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur: 320ms;
 }

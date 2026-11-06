@@ -199,7 +199,7 @@
   },
   "team": {
     "eyebrow": "LOCAL PEOPLE, PERSONAL SUPPORT",
-    "title": "THE PEOPLE\nBEHIND AROHYA",
+    "title": "The people behind Arohya",
     "description": "Meet the people working behind Arohya Capital to make every loan journey clear, simple, and supportive.",
     "membersTitle": "THE TEAM",
     "memberDescription": "Supporting our community with clear, personal guidance throughout the loan process.",
@@ -359,5 +359,40 @@
     "submitted": "Thank you — we will call you within 1 working day",
     "submit": "Request a Free Call Back",
     "whatsapp": "Message us on WhatsApp"
+  },
+  "ui": {
+    "scroll": "Scroll",
+    "hero": {
+      "comparing": "Comparing offers",
+      "illustrative": "Illustrative",
+      "loan": "Home loan · ₹25 lakh · 15 yrs",
+      "lenders": {
+        "nationalised": "Nationalised bank",
+        "private": "Private bank",
+        "regional": "Regional bank",
+        "nbfc": "NBFC"
+      },
+      "bestFit": "Lowest rate highlighted",
+      "proceed": "Proceed",
+      "emi": "Est. EMI",
+      "perMonth": "per month · 8.40% p.a.",
+      "sanctioned": "Sanctioned",
+      "direct": "Funds credited by the bank"
+    },
+    "why": {
+      "pledge": "Our pledge",
+      "pledgeTitle": "Two promises we keep to every borrower."
+    },
+    "team": {
+      "people": "people",
+      "focus": "How we support you"
+    },
+    "band": {
+      "eyebrow": "Free consultation",
+      "title": "Not sure which loan fits?",
+      "emphasis": "Ask a Tumkur advisor.",
+      "description": "No-obligation guidance in Kannada or English — over the phone, on WhatsApp, or at our B.H. Road office.",
+      "callback": "Request a callback"
+    }
   }
 }

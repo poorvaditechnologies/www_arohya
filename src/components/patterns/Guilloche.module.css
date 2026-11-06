@@ -1,0 +1,21 @@
+.rosette {
+  position: absolute;
+  aspect-ratio: 1;
+  pointer-events: none;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  animation: spin 160s linear infinite;
+  will-change: transform;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

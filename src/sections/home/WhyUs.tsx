@@ -1,82 +1,92 @@
-import { whyItems } from '@/data/whyItems';
 import { useTranslation } from 'react-i18next';
+import { FadeIn, ScrollWords, SplitText } from '@/components/animations';
+import { Guilloche } from '@/components/patterns';
+import { Icon, type IconName } from '@/components/ui';
+import { whyItems } from '@/data/whyItems';
+import styles from './WhyUs.module.css';
+
+const ICONS: IconName[] = ['route', 'pin', 'shield', 'globe'];
+
+const PARTNERS = [
+  { name: 'State Bank of India', key: 'sbi' },
+  { name: 'Canara Bank', key: 'canara' },
+  { name: 'Karnataka Bank', key: 'karnataka' },
+  { name: 'Bank of Baroda', key: 'baroda' },
+  { name: 'HDFC Bank', key: 'hdfc' },
+] as const;
 
 export function WhyUs() {
   const { t } = useTranslation();
 
   return (
-    <section id="why" className="why-section">
-      <div className="why-layout">
-        <div className="why-copy">
-          <div className="section-eyebrow">{t('why.eyebrow')}</div>
-          <h2>{t('why.title')}</h2>
-          <p>{t('why.description')}</p>
-          <ul className="why-promises">
-            <li>
-              <strong>{t('why.promises.lendersTitle')}</strong>
-              <span>{t('why.promises.lendersDescription')}</span>
-            </li>
-            <li>
-              <strong>{t('why.promises.roleTitle')}</strong>
-              <span>{t('why.promises.roleDescription')}</span>
-            </li>
-          </ul>
-        </div>
-        <div className="why-cards">
-          {whyItems.map((item, index) => (
-            <article className="why-card" key={item.title}>
-              <span className="why-icon" aria-hidden="true">
-                {['↝', '▦', '⌁', '♙'][index]}
-              </span>
-              <h3>{t(`why.items.${index}.title`)}</h3>
-              <p>{t(`why.items.${index}.description`)}</p>
-            </article>
-          ))}
+    <section id="why" className={styles.section}>
+      <div className="container">
+        <header className={styles.head}>
+          <div className={styles.heading}>
+            <span className="eyebrow">{t('why.eyebrow')}</span>
+            <SplitText className={`section-title ${styles.title}`} text={t('why.title')} />
+          </div>
+
+          <blockquote className={styles.quote}>
+            <span className={styles.quoteMark} aria-hidden="true">
+              &ldquo;
+            </span>
+            <ScrollWords className={styles.statement} text={t('why.description')} />
+          </blockquote>
+        </header>
+
+        <div className={styles.grid}>
+          <FadeIn className={styles.pledge}>
+            <Guilloche className={styles.pledgeRosette} speed={220} draw={false} opacity={0.4} />
+            <span className={`mono ${styles.pledgeLabel}`}>
+              <Icon name="shield" size={16} />
+              {t('ui.why.pledge')}
+            </span>
+            <h3 className={styles.pledgeTitle}>{t('ui.why.pledgeTitle')}</h3>
+            <ul>
+              <li>
+                <strong>{t('why.promises.lendersTitle')}</strong>
+                <span>{t('why.promises.lendersDescription')}</span>
+              </li>
+              <li>
+                <strong>{t('why.promises.roleTitle')}</strong>
+                <span>{t('why.promises.roleDescription')}</span>
+              </li>
+            </ul>
+          </FadeIn>
+
+          <div className={styles.items}>
+            {whyItems.map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.08} as="article" className={styles.item}>
+                <span className={styles.icon}>
+                  <Icon name={ICONS[i]} size={22} />
+                </span>
+                <h3>{t(`why.items.${i}.title`)}</h3>
+                <p>{t(`why.items.${i}.description`)}</p>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </div>
-      <div className="partner-banks">
-        <div className="partner-heading">
-          <span>{t('why.partners.eyebrow')}</span>
-          <h2>{t('why.partners.title')}</h2>
+
+      <div className={styles.partners}>
+        <div className={`container ${styles.partnersHead}`}>
+          <span className="eyebrow">{t('why.partners.eyebrow')}</span>
+          <h3>{t('why.partners.title')}</h3>
         </div>
-        <div className="partner-list">
-          <div className="partner-bank">
-            <span className="partner-mark mark-sbi">◉</span>
-            <span>
-              <strong>State Bank of India</strong>
-              <small>{t('why.partners.sbi')}</small>
-            </span>
-          </div>
-          <div className="partner-bank">
-            <span className="partner-mark mark-canara">△</span>
-            <span>
-              <strong>Canara Bank</strong>
-              <small>{t('why.partners.canara')}</small>
-            </span>
-          </div>
-          <div className="partner-bank">
-            <span className="partner-mark mark-karnataka">◉</span>
-            <span>
-              <strong>Karnataka Bank</strong>
-              <small>{t('why.partners.karnataka')}</small>
-            </span>
-          </div>
-          <div className="partner-bank">
-            <span className="partner-mark mark-bob">B</span>
-            <span>
-              <strong>Bank of Baroda</strong>
-              <small>{t('why.partners.baroda')}</small>
-            </span>
-          </div>
-          <div className="partner-bank">
-            <span className="partner-mark mark-hdfc">▦</span>
-            <span>
-              <strong>HDFC Bank</strong>
-              <small>{t('why.partners.hdfc')}</small>
-            </span>
-          </div>
+        <div className={styles.marquee}>
+          {[0, 1].map((copy) => (
+            <ul key={copy} className={styles.marqueeTrack} aria-hidden={copy === 1}>
+              {[...PARTNERS, ...PARTNERS].map((p, i) => (
+                <li key={`${p.key}-${i}`}>
+                  <span className={styles.bankName}>{p.name}</span>
+                  <span className={styles.bankRole}>{t(`why.partners.${p.key}`)}</span>
+                </li>
+              ))}
+            </ul>
+          ))}
         </div>
-        <p className="partner-note">{t('why.partners.disclaimer')}</p>
+        <p className={`container ${styles.disclaimer}`}>{t('why.partners.disclaimer')}</p>
       </div>
     </section>
   );

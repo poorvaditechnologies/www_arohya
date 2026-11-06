@@ -1,0 +1,92 @@
+.stats {
+  position: relative;
+  padding-block: clamp(4.5rem, 9vw, 7.5rem);
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 1.5rem 3rem;
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.statement {
+  max-width: 26ch;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  box-shadow: 0 30px 60px -45px rgb(11 26 42 / 0.35);
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 2rem 1.75rem;
+}
+
+.item + .item {
+  border-left: 1px solid var(--line);
+}
+
+/* Brass tick marks the top of each figure. */
+.item::before {
+  position: absolute;
+  top: -1px;
+  left: 1.75rem;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--brass);
+  content: '';
+}
+
+.item dt {
+  color: var(--text-2);
+  font-size: var(--fs-small);
+}
+
+.item dd {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5.2vw, 4.8rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 900px) {
+  .head {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .item:nth-child(3) {
+    border-left: 0;
+  }
+
+  .item:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
+  .item:nth-child(n + 3)::before {
+    display: none;
+  }
+}

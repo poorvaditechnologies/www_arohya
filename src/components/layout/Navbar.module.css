@@ -1,0 +1,378 @@
+.notice {
+  background: var(--ink-deep);
+  color: var(--on-ink-2);
+  font-size: var(--fs-micro);
+}
+
+.notice p {
+  display: flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-block: 0.4rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.notice svg {
+  flex: none;
+  color: var(--accent);
+}
+
+.nav {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  transition:
+    background var(--dur) var(--ease-out),
+    border-color var(--dur) var(--ease-out),
+    backdrop-filter var(--dur) var(--ease-out);
+}
+
+.scrolled {
+  border-bottom-color: var(--line);
+  background: rgb(244 241 234 / 0.82);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+}
+
+/* Homepage: the bar floats over the dark hero instead of pushing it down. */
+:global(body:has(main > section:first-child[data-dark])) .nav {
+  margin-bottom: -77px; /* 76px bar + 1px border */
+}
+
+.onDark .brand,
+.onDark .link,
+.onDark .burger {
+  color: var(--on-ink);
+}
+
+.onDark .link {
+  color: var(--on-ink-2);
+}
+
+.onDark .link span::after {
+  color: var(--brass-light);
+}
+
+.onDark .burger {
+  border-color: var(--line-on-ink);
+}
+
+.onDark .lang {
+  border-color: var(--line-on-ink);
+}
+
+.onDark .lang button {
+  color: var(--on-ink-2);
+}
+
+.onDark .lang button[aria-pressed='true'] {
+  color: var(--ink);
+}
+
+.onDark .langPill {
+  background: var(--brass-light);
+}
+
+.onDark .cta {
+  background: var(--on-ink);
+  color: var(--ink);
+}
+
+.onDark .cta:hover {
+  color: #fff;
+}
+
+.navOpen,
+.navOpen.scrolled {
+  border-bottom-color: transparent;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.navOpen .brand {
+  color: var(--on-ink);
+}
+
+.navOpen .lang {
+  border-color: var(--line-on-ink);
+}
+
+.navOpen .lang button {
+  color: var(--on-ink-2);
+}
+
+.navOpen .lang button[aria-pressed='true'] {
+  color: var(--ink);
+}
+
+.navOpen .langPill {
+  background: var(--on-ink);
+}
+
+.inner {
+  display: flex;
+  height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Brand */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--ink);
+}
+
+.brandLight {
+  color: var(--on-ink);
+}
+
+.mark {
+  width: 28px;
+  height: 28px;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.wordmark span {
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.brandLight .wordmark span {
+  color: var(--on-ink-3);
+}
+
+/* Links — label rolls up to reveal a duplicate on hover. */
+.links {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.link {
+  display: inline-block;
+  overflow: hidden;
+  color: var(--text-2);
+  font-size: var(--fs-small);
+  line-height: 1.4;
+}
+
+.link span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.link span::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: var(--ink);
+  content: attr(data-text);
+}
+
+.link:hover span {
+  transform: translateY(-100%);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cta {
+  min-height: 42px;
+  padding-inline: 1.15rem;
+  font-size: var(--fs-small);
+}
+
+/* Language toggle */
+.lang {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-full);
+}
+
+.lang button {
+  position: relative;
+  min-width: 38px;
+  height: 32px;
+  padding: 0 0.6rem;
+  border: 0;
+  background: none;
+  color: var(--text-2);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  transition: color var(--dur) var(--ease-out);
+}
+
+.lang button[aria-pressed='true'] {
+  color: var(--on-ink);
+}
+
+.lang button > span:last-child {
+  position: relative;
+}
+
+.langPill {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-full);
+  background: var(--ink);
+}
+
+/* Burger */
+.burger {
+  position: relative;
+  z-index: 2;
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: none;
+}
+
+.burger span {
+  position: absolute;
+  left: 50%;
+  width: 16px;
+  height: 1.5px;
+  margin-left: -8px;
+  background: currentColor;
+  transition:
+    transform 0.45s var(--ease-out),
+    top 0.45s var(--ease-out);
+}
+
+.burger span:first-child {
+  top: 18px;
+}
+
+.burger span:last-child {
+  top: 24px;
+}
+
+.burgerOpen {
+  border-color: var(--line-on-ink);
+  color: var(--on-ink);
+}
+
+.burgerOpen span:first-child {
+  top: 21px;
+  transform: rotate(45deg);
+}
+
+.burgerOpen span:last-child {
+  top: 21px;
+  transform: rotate(-45deg);
+}
+
+/* Mobile sheet */
+.sheet {
+  position: fixed;
+  z-index: 99;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding-block: 7rem 2.5rem;
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+.sheet > div {
+  width: 100%;
+}
+
+.sheetLinks {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.sheetMask {
+  overflow: hidden;
+}
+
+.sheetLinks a {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 9vw, 3.6rem);
+  line-height: 1.15;
+}
+
+.sheetLinks a span {
+  color: var(--on-ink-3);
+  font-size: var(--fs-micro);
+}
+
+.sheetFoot {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line-on-ink);
+  color: var(--on-ink-2);
+  font-size: var(--fs-small);
+}
+
+.sheetFoot a {
+  color: var(--on-ink);
+  font-size: 1.15rem;
+}
+
+@media (max-width: 1080px) {
+  .links {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@media (max-width: 560px) {
+  :global(body:has(main > section:first-child[data-dark])) .nav {
+    margin-bottom: -67px;
+  }
+
+  .inner {
+    height: 66px;
+  }
+
+  .cta {
+    display: none;
+  }
+
+  .notice p {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .wordmark span {
+    display: none;
+  }
+}

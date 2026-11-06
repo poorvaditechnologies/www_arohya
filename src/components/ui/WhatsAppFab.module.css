@@ -1,0 +1,33 @@
+.fab {
+  position: fixed;
+  z-index: 90;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  display: inline-flex;
+  height: 56px;
+  align-items: center;
+  gap: 0;
+  padding: 0 16px;
+  border-radius: var(--radius-full);
+  background: #1f9e5b;
+  box-shadow: 0 14px 34px -10px rgb(11 26 42 / 0.45);
+  color: #fff;
+  transition: gap var(--dur) var(--ease-out);
+}
+
+.label {
+  max-width: 0;
+  overflow: hidden;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: max-width 0.5s var(--ease-out);
+}
+
+.fab:hover {
+  gap: 0.6rem;
+}
+
+.fab:hover .label {
+  max-width: 200px;
+}

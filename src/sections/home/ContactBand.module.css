@@ -1,0 +1,131 @@
+.band {
+  position: relative;
+  padding-block: clamp(4.5rem, 9vw, 7rem);
+  overflow: hidden;
+  background: var(--accent);
+  color: #fff;
+  isolation: isolate;
+}
+
+/* Engraved diagonal hatching, like the background of a cheque. */
+.lines {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgb(255 255 255 / 0.07) 0 1px,
+    transparent 1px 11px
+  );
+  mask-image: linear-gradient(90deg, #000 0%, transparent 70%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, transparent 70%);
+}
+
+.rosette {
+  z-index: -1;
+  top: 50%;
+  left: -12rem;
+  width: 44rem;
+  translate: 0 -50%;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgb(255 255 255 / 0.4);
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  max-width: 16ch;
+  margin-top: 1.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.title em {
+  color: var(--ink-deep);
+  font-style: italic;
+}
+
+.copy p {
+  max-width: 46ch;
+  margin-top: 1.5rem;
+  color: rgb(255 255 255 / 0.85);
+  font-size: var(--fs-lead);
+}
+
+.actions {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: start;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.6vw, 3.1rem);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.phone small {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: rgb(255 255 255 / 0.75);
+  font-family: var(--font-sans);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.02em;
+}
+
+.phoneIcon {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--accent);
+  transition: transform 0.5s var(--ease-out);
+}
+
+.phone:hover .phoneIcon {
+  transform: rotate(-14deg) scale(1.06);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.buttons :global(.btn-ghost-light) {
+  border-color: rgb(255 255 255 / 0.5);
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .rosette {
+    left: auto;
+    right: -18rem;
+  }
+}

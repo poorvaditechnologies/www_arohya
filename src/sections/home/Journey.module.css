@@ -1,0 +1,210 @@
+.section {
+  position: relative;
+  background: var(--paper-2);
+}
+
+.pin {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  align-items: stretch;
+  gap: 1.5rem;
+  padding-inline: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  will-change: transform;
+}
+
+.intro {
+  display: flex;
+  width: min(36rem, 42vw);
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-right: 3rem;
+}
+
+.card {
+  display: flex;
+  width: clamp(20rem, 27vw, 24rem);
+  min-height: min(30rem, 62vh);
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  transition:
+    transform 0.6s var(--ease-out),
+    box-shadow 0.6s var(--ease-out);
+}
+
+.card:hover {
+  box-shadow: 0 40px 60px -40px rgb(11 26 42 / 0.35);
+  transform: translateY(-6px);
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.num {
+  color: var(--paper-3);
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 8vw, 7rem);
+  letter-spacing: -0.04em;
+  line-height: 0.8;
+  -webkit-text-stroke: 1px var(--line-strong);
+}
+
+.cardIcon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--paper-2);
+}
+
+.cardBody {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 2.5rem;
+}
+
+.cardBody h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.cardBody p {
+  color: var(--text-2);
+  font-size: var(--fs-small);
+  line-height: 1.65;
+}
+
+.label {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--accent-ink);
+  font-size: var(--fs-micro);
+}
+
+.final {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+.final .num {
+  color: transparent;
+  -webkit-text-stroke-color: var(--brass);
+}
+
+.final .cardIcon {
+  background: var(--accent);
+  color: #fff;
+}
+
+.final .cardBody p {
+  color: var(--on-ink-2);
+}
+
+.final .label {
+  border-color: var(--line-on-ink);
+  color: #7fd1a6;
+}
+
+.visit {
+  display: flex;
+  width: clamp(20rem, 26vw, 23rem);
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-left: 1.5rem;
+  padding: 2rem;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-lg);
+}
+
+.visit > svg {
+  margin-bottom: auto;
+  color: var(--accent);
+}
+
+.visit h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  line-height: 1.1;
+}
+
+.visit p {
+  color: var(--text-2);
+  font-size: var(--fs-small);
+}
+
+.visit :global(.btn) {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  white-space: normal;
+  text-align: left;
+}
+
+.progressWrap {
+  margin-top: 3rem;
+}
+
+.progress {
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: var(--ink);
+  transform-origin: left;
+}
+
+/* ---------- Stacked (mobile / reduced motion) ---------- */
+
+.stacked {
+  padding-block: var(--section-y);
+}
+
+.stacked .intro {
+  width: auto;
+  padding: 0 0 2.5rem;
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+
+.stack .card {
+  width: auto;
+  min-height: 0;
+}
+
+.stacked .visit {
+  width: auto;
+  margin: 1rem 0 0;
+}
+
+.stacked .visit > svg {
+  margin-bottom: 1rem;
+}

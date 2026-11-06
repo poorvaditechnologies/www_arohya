@@ -6,8 +6,15 @@ export const SITE = {
   tagline: 'One-Stop Financial Solutions',
 } as const;
 
+export const CONTACT = {
+  phoneDisplay: '+91 816 220 0000',
+  phoneHref: 'tel:+918162200000',
+  whatsappHref: 'https://wa.me/918162200000',
+  email: 'support@arohyacapital.com',
+  address: 'B.H. Road, Ashok Nagar, Tumkur – 572102',
+} as const;
+
 export const NAV_LINKS: NavLink[] = [
-  { href: '#top', labelKey: 'navigation.home' },
   { href: '#services', labelKey: 'navigation.loans' },
   { href: '#journey', labelKey: 'navigation.howItWorks' },
   { href: '#calculator', labelKey: 'navigation.emiCalculator' },

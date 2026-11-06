@@ -1,8 +1,9 @@
+// Global styles first so component CSS modules can override shared classes like .btn.
+import '@/styles/globals.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from '@/app/App';
 import '@/i18n';
-import '@/styles/globals.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

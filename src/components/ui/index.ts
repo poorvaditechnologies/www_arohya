@@ -1,3 +1,3 @@
-export { Button } from './Button';
-export { Container } from './Container';
+export { Icon, WhatsAppGlyph } from './Icon';
+export type { IconName } from './Icon';
 export { WhatsAppFab } from './WhatsAppFab';
